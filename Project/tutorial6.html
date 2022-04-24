@@ -1,0 +1,26 @@
+<html>
+<body>
+
+<h1> Tutorial 6 transforming complex shapes with respect to click events</h1>
+
+
+<svg onclick=test() width="500" height="500">
+  <polyline id= "temp2" points="0,40 20,0 40,40 20,80"/>
+  <animateTransform id="temp"/>
+</svg>
+
+
+<script>
+function test() {
+  document.getElementById("temp2").setAttribute('fill','red');  
+  document.getElementById("temp").setAttribute('attributeName','transform');
+  document.getElementById("temp").setAttribute('type','rotate');
+  document.getElementById("temp").setAttribute('from','20 50 90');
+  document.getElementById("temp").setAttribute('to','1800 20 20');
+  document.getElementById("temp").setAttribute('dur','10s');
+  document.getElementById("temp").setAttribute('repeatCount','indefinite');
+  
+}
+</script>
+</body>
+</html>
